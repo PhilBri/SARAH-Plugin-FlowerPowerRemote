@@ -1,0 +1,12 @@
+{
+  "modules" : { 
+    "flowerpowerremote"  : {
+      "description": "SARAH donne les valeurs des Flower Power",
+      "version" : "0.9",
+      "username": "",
+      "password": "",
+      "client_id" : "",
+      "client_secret" : ""
+    }
+  }
+}

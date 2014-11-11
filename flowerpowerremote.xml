@@ -1,0 +1,122 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleflowerpowerremote" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruleflowerpowerremote" scope="public">
+  <example>Sarah quelles sont les plantes</example>
+  <tag>out.action=new Object(); </tag>
+
+        <item>
+            Sarah 
+            <one-of>
+
+                <item>Combien de plantes sont connectées
+                    <tag>out.action.mode="nbPlants";out.action.ttsAction=" plantes sont connectées";</tag>
+                </item>
+
+                <item>
+
+                    <one-of>
+                        <item>Quel est</item>
+                        <item>Quelle est</item>
+                        <item>Donne moi</item>
+                        <item>Vérifie</item>
+                        <item>Quels sont</item>
+                    </one-of>
+
+                    <one-of>
+                        <item>
+                            Le nom
+                            <tag>out.action.mode="plantNames";</tag>
+                        </item>
+
+                        <item>
+                            Les noms
+                            <tag>out.action.mode="plantNames";</tag>
+                        </item>
+
+                        <item>
+                            L'humidité
+                            <tag>out.action.mode="soil_moisture";out.action.ttsAction="L'humidité XY est de Z %";</tag>
+                        </item>
+ 
+                        <item>
+                            La température
+                            <tag>out.action.mode="air_temperature";out.action.ttsAction="La température XY est de Z degrés";</tag>
+                        </item>
+
+                        <item>
+                            La luminosité
+                            <tag>out.action.mode="light";out.action.ttsAction="La luminosité XY est de Z lux";</tag>
+                        </item>
+
+                        <item>
+                            La qualité du sol
+                            <tag>out.action.mode="fertilizer";out.action.ttsAction="La qualité du sol XY est de Z";</tag>
+                        </item>
+
+                        <item>
+                            L'état de la batterie
+                            <tag>out.action.mode="battery_level";out.action.ttsAction="La batterie XY est à Z %";</tag>
+                        </item>
+                    </one-of>
+
+                    <item repeat="0-1">
+
+                        <one-of>
+                            <item>du
+                                <tag>out.action.gender="du ";</tag>
+                            </item>
+
+                            <item>de la
+                                <tag>out.action.gender="de la ";</tag>
+                            </item>
+
+                            <item>de l'
+                                <tag>out.action.gender="de l'";</tag>
+                            </item>
+
+                            <item>des
+                                <tag>out.action.gender="des ";</tag>
+                            </item>
+                        </one-of>
+
+                        <one-of>
+                            <item>Plantes
+                            </item>
+
+<!-- Automatic Generation § -->
+							<item>Orchidées 
+								<tag>out.action.name="Orchidées ";</tag>
+							</item>
+
+							<item>Lierre
+								<tag>out.action.name="Lierre";</tag>
+							</item>
+
+							<item>Anthurium 
+								<tag>out.action.name="Anthurium ";</tag>
+							</item>
+
+							<item>Spathiphyllum
+								<tag>out.action.name="Spathiphyllum";</tag>
+							</item>
+<!-- § Automatic Generation -->
+
+                        </one-of>
+                    </item>
+                </item>
+
+            </one-of>
+            <item repeat="0-1">
+
+                <one-of>
+                    <item>s'il te plait</item>
+                    <item>si il te plait</item>
+                    <item>se te plait</item>
+                </one-of>
+
+            </item>
+
+        </item>
+
+        <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/flowerpowerremote";</tag>
+    </rule>
+</grammar>
