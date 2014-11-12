@@ -8,10 +8,10 @@
 |___________________________________________________|
 */
 var FlowerPower 	= require ( './lib/Flower-Power.js' ),
-	fs   			= require ( 'fs' ),
+	fs 				= require ( 'fs' ),
 	api,
 	config,
-	myPlants		= {},
+	myPlants 		= {},
 	myPlantData		= {},
 	myPlantStatus 	= {},
 	access;
@@ -75,7 +75,7 @@ exports.init = function ( SARAH ) {
 			var	config_xml 	= '';
 			locations.forEach ( function ( plant ) {
 
-				config_xml += 	'\r\t\t\t\t\t\t\t<item>' + 	plant.plant_nickname
+				config_xml	+= 	'\r\t\t\t\t\t\t\t<item>' + 	plant.plant_nickname
 							+ 	'\r\t\t\t\t\t\t\t\t<tag>out.action.name="' + plant.plant_nickname + '";</tag>'
 							+	'\r\t\t\t\t\t\t\t</item>\r\n';
 
