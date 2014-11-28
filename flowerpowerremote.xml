@@ -83,21 +83,6 @@
                             </item>
 
 <!-- Automatic Generation § -->
-							<item>Orchidées 
-								<tag>out.action.name="Orchidées ";</tag>
-							</item>
-
-							<item>Lierre
-								<tag>out.action.name="Lierre";</tag>
-							</item>
-
-							<item>Anthurium 
-								<tag>out.action.name="Anthurium ";</tag>
-							</item>
-
-							<item>Spathiphyllum
-								<tag>out.action.name="Spathiphyllum";</tag>
-							</item>
 <!-- § Automatic Generation -->
 
                         </one-of>
